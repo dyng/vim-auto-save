@@ -1,9 +1,3 @@
-# Call for Maintainer
-
-Dear users of this plugin! Sorry, but I no longer maintain it!
-If someone of you are interested in maintaining it,
-please, contact me and I will add you as a contributor.
-
 # Description
 
 AutoSave - automatically saves changes to disk without having to use `:w`
@@ -126,19 +120,11 @@ option (like `:wa`).
 let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
 ```
 
-
 # Development
 
 The `doc/auto-save.txt` is a converted version of the `README.md`. Don't edit
 it directly. Instead install the [md2vim](https://github.com/FooSoft/md2vim) and
 run the `update_doc_from_readme.sh` script.
-
-
-# Contribution or Bug Report
-
-Development is made in [907th/vim-auto-save](https://github.com/907th/vim-auto-save) repo.
-Please, report any bugs and/or suggestions there. Any contrubution is welcomed!
-
 
 # License
 

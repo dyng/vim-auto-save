@@ -97,9 +97,7 @@ endfunction
 
 function s:IsModified()
   if g:auto_save_write_all_buffers >= 1
-    let buffers = filter(range(1, bufnr('$')), 'bufexists(v:val)')
-    call filter(buffers, 'getbufvar(v:val, "&modified")')
-    return len(buffers) > 0
+    return len(getbufinfo({'bufmodified': 1})) > 0
   else
     return &modified
   endif
@@ -124,9 +122,7 @@ endfunction
 
 function DoSave()
   if g:auto_save_write_all_buffers >= 1
-    let current_buf = bufnr('%')
-    silent! bufdo update
-    execute 'buffer' . current_buf
+    silent! wall
   else
     silent! update
   endif
